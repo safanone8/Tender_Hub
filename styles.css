@@ -1,0 +1,525 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #AFD3E2;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(11, 132, 145);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header .logo {
+    /* margin-top: 10px; */
+    margin-left: -20px;  /* Adjust margin as needed */
+    margin-top: -5px;
+    display: block;
+    width: 300px;  /* Adjust width for your logo */
+}
+
+header .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#element #element2 {
+    color: #E2DFD2;
+}
+
+nav {
+    /* float: right; */
+    margin-right: 20px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: #ffd600;
+}
+.whatsapp-contact {
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: greenyellow; /* Background for better visibility */
+    border-radius: 50px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, background 0.3s; /* Smooth transition for hover effects */
+    animation: pulse 2s infinite; /* Pulsing effect */
+}
+
+.whatsapp-contact i {
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+.whatsapp-contact:hover {
+    color: black;
+    text-decoration: none; /* Remove underline on hover */
+    background: white; /* Light green background on hover */
+    transform: scale(1.1); /* Slightly grow on hover */
+}
+
+
+/* Hero Section */
+#home {
+    background-image: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+#home h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#home p {
+    width : 70%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#services {
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px; /* Offset for the fixed header */
+}
+
+#services h2 {
+    font-size: 41px;
+    margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+    perspective: 1000px;
+    display: inline-block;
+    margin: 20px;
+}
+
+/* Card Styles */
+.card-container {
+    perspective: 1000px;
+    display: inline-block;
+    margin: 20px;
+    width: 250px; /* Ensure container width matches card */
+    height: 300px; /* Ensure container height matches card */
+    position: relative;
+    perspective-origin: center; /* Center perspective to avoid movement */
+}
+
+/* Card Styles */
+.card {
+    width: 100%; /* Match the container width */
+    height: 80%; /* Match the container height */
+    position: absolute; /* Position absolute to stay in place */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Front and Back Styles */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* To stack image and text vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in element’s total width and height */
+}
+
+
+/* Card Images */
+.card-front img{
+    width: 150px;
+    height: 150px;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.card-front {
+    /* background-image: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%); */
+    background-color: whitesmoke;
+    color: black;
+    overflow: hidden;
+}
+
+.card-back {
+    background-color: #333; 
+    color: white;
+    transform: rotateY(180deg);
+    text-align: left;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 100%; /* Ensures it doesn’t overflow the card */
+}
+
+/* Align Text in Card Back to the Left */
+.card-back p {
+    text-align: left;
+    margin: 0;
+    line-height: 1.4;
+}
+.card-back a{
+    color: red;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    background-color: #AFD3E2;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card-back a:hover{
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #25d366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link i {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+.whatsapp-link:hover {
+    background: #1da851;
+}
+
+
+/* About Us Section */
+#about {
+    width : 70%;
+    margin: 0 auto;
+    /* background-color: #E2DFD2; */
+    text-align: center;
+    padding: 100px 0;
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Contact Section */
+#contact {
+    background-image: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+    color: #ffd600;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    z-index: 1000;
+}
+
+.floating-whatsapp a {
+    display: inline-block;
+    background-color: #25d366;
+    color: #fff;
+    font-size: 2rem;
+    width: 60px;  /* Ensure a circular shape */
+    height: 60px;  /* Ensure a circular shape */
+    border-radius: 50%;  /* Makes it round */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Centers the icon */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    line-height: 1;  /* Centers the icon vertically */
+    text-decoration: none;  /* Removes underline */
+    position: relative;  /* Needed for positioning chat text */
+}
+
+.floating-whatsapp a i {
+    margin: 0;  /* Centers the icon */
+}
+
+.floating-whatsapp a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling the chat text */
+.floating-whatsapp .chat-text {
+    display: none;  /* Initially hidden */
+    position: absolute;  /* Absolute to position it next to the icon */
+    top: 50%;  /* Align with the middle of the icon */
+    left: -80px;  /* Positioning it right of the icon */
+    transform: translateY(-50%);  /* Center vertically */
+    background-color: whitesmoke;  /* Matching background color */
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    white-space: nowrap;  /* Prevents text from wrapping */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.floating-whatsapp a:hover .chat-text {
+    display: block;  /* Show on hover */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-left p, .footer-left a {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer-left a {
+    color: #d4963e;
+}
+
+.footer-left a:hover {
+    color: #e5d895;
+}
+
+.footer-right iframe {
+    border: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+}
+iframe{
+    border-radius: 20px;
+}
+
+footer p {
+    margin: 10px 0 0;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer-right iframe {
+        width: 100%;
+    }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 0 45%; /* Two cards in a row on smaller screens */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 90%; /* Single card per row on small screens */
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Make card responsive */
+    }
+}
